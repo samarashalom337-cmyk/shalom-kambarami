@@ -1,81 +1,206 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        h1 { color :rgb(0, 255, 55);}
-        p {font-size:18px}
-        h1 {font-family:Georgia, 'Times New Roman', Times, serif}
-
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <meta name="description" content="Shalom Kambarami's personal profile and software engineering portfolio.">
+
+    <title>Shalom Kambarami | Portfolio</title>
+
     <link rel="stylesheet" href="shaloe.css">
+
+    <!-- Tailwind CSS for Assignment 2 -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header> 
-        <style>
-            h1{
-                color:brown;
-                font-size :40px;
-                text-align:right;
-            }
-            nav{
-                background-color:blueviolet;
-                padding:40px;
-            }
-            p{
-                color:aquamarine;
-                font-size:x-large
-            }
-            a{
-                color:bisque;
-                text-decoration:solid;
-                margin:0cqmax;
-            
-        </style>
-           
-        <h1>Shalom kambarami</h1>
-        <p>Software Engineering Student</p>
 
-</header>
+<body class="bg-slate-50 text-slate-800">
 
-<nav>
+    <!-- Header: Tailwind utilities -->
+    <header id="home" class="bg-slate-900 text-white px-6 py-8 md:px-12 md:py-12">
+        <div class="mx-auto max-w-6xl">
+            <h1 class="text-3xl font-bold tracking-tight md:text-5xl">
+                Shalom Kambarami
+            </h1>
 
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</nav>
-<main>
-<section id="about">
-<h2>About Me</h2>
-<p>I am interested in softwaredevelopment and web technologies.<p></p>
-</section>
-<section id="skills">
-<h2>My Skills</h2>
-<p>HTML, CSS, JavaScript and Git.</p>
-</section>
-<section id="contact">
-<h2>Contact Me</h2>
-<p>samarashalom337@gmail.com</p>
-<!-- Form goes here -->
- <form>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+            <p class="mt-3 text-lg text-blue-200 md:text-xl">
+                Software Engineering Student
+            </p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <button type="submit">Submit</button>
-      </form>
-</section>
-</main>
-<footer>
-<p>&copy; 2026 Shalom Kambarami</p>
-</footer>
+            <p class="mt-3 max-w-2xl leading-relaxed text-slate-300">
+                Welcome to my personal portfolio. I am passionate about
+                technology, software development and solving real-world problems.
+            </p>
+        </div>
     </header>
-    
+
+    <!-- Navigation: Flexbox and Tailwind responsive utilities -->
+    <nav aria-label="Main navigation"
+         class="bg-indigo-700 px-4 py-4 text-white">
+        <ul class="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-4 sm:gap-8">
+            <li>
+                <a class="rounded px-3 py-2 font-medium hover:bg-indigo-600"
+                   href="#about">About</a>
+            </li>
+            <li>
+                <a class="rounded px-3 py-2 font-medium hover:bg-indigo-600"
+                   href="#skills">Skills</a>
+            </li>
+            <li>
+                <a class="rounded px-3 py-2 font-medium hover:bg-indigo-600"
+                   href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="mx-auto max-w-6xl px-5 py-8 md:px-10 md:py-12">
+
+        <!-- About section -->
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+
+            <article>
+                <p>
+                    My name is Shalom Kambarami, and I am a Software Engineering
+                    student at Africa University in Zimbabwe. I am interested
+                    in technology and how information systems can help solve
+                    everyday problems.
+                </p>
+
+                <p>
+                    I am developing my knowledge of web technologies,
+                    programming and software development. I enjoy learning
+                    new concepts and applying them to practical projects.
+                </p>
+
+                <p>
+                    My goal is to become a skilled software engineer who
+                    develops useful, reliable and user-friendly applications.
+                    I value determination, creativity and continuous learning.
+                </p>
+            </article>
+        </section>
+
+        <!-- Skills section: CSS Grid -->
+        <section id="skills" class="content-section">
+            <h2>My Skills and Interests</h2>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>HTML5</h3>
+                    <p>Creating structured and semantic web pages.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>CSS3</h3>
+                    <p>Styling web pages with layouts, colours and responsive design.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Programming</h3>
+                    <p>Learning programming logic and problem-solving techniques.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Software Engineering</h3>
+                    <p>Exploring how useful and reliable software is designed.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact section: Tailwind utilities -->
+        <section id="contact"
+                 class="content-section rounded-xl bg-white p-5 shadow-sm md:p-8">
+            <h2>Contact Me</h2>
+
+            <p class="mb-6">
+                If you would like to connect with me, please use the form below.
+            </p>
+
+            <form action="#" method="get"
+                  class="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+                <div class="form-field">
+                    <label for="name">Full Name</label>
+                    <input
+                        class="w-full rounded-lg border border-slate-300 p-3 focus:border-indigo-600"
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input
+                        class="w-full rounded-lg border border-slate-300 p-3 focus:border-indigo-600"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        class="w-full rounded-lg border border-slate-300 p-3 focus:border-indigo-600"
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel"
+                        pattern="[0-9+() -]{7,20}"
+                        title="Enter a valid phone number using 7 to 20 characters."
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="topic">Reason for Contact</label>
+                    <select
+                        class="w-full rounded-lg border border-slate-300 bg-white p-3 focus:border-indigo-600"
+                        id="topic"
+                        name="topic"
+                        required>
+                        <option value="">Choose a topic</option>
+                        <option value="academic">Academic enquiry</option>
+                        <option value="project">Project collaboration</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-field md:col-span-2">
+                    <label for="message">Message</label>
+                    <textarea
+                        class="w-full rounded-lg border border-slate-300 p-3 focus:border-indigo-600"
+                        id="message"
+                        name="message"
+                        rows="5"
+                        minlength="10"
+                        placeholder="Write your message here"
+                        required></textarea>
+                </div>
+
+                <div class="md:col-span-2">
+                    <button
+                        class="w-full rounded-lg bg-indigo-700 px-6 py-3 font-semibold text-white hover:bg-indigo-800 sm:w-auto"
+                        type="submit">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 px-5 py-6 text-center text-slate-200">
+        <p>&copy; 2026 Shalom Kambarami. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
